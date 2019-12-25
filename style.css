@@ -1,39 +1,60 @@
-#display{
-  background-color:#dedede;
-   width: 158px;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
-.displayRow {
-  background-color:#dedede;
-  width: 158px;
-  height:19px;
-  display: block;
-  text-align: right;
-  font-size: 30px;
-  
-
-}
-#row4{
-  text-align: right;
-  font-size: 20px;
-  color:#6e6e6e;
-}
-.row {
-  background-color: #bfbeb9;
+.main {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  width: 5%;
-  height: 5%;
+  height: 100%;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "dis" "key";
+}
+.display,
+.display div {
+  background: black;
+  grid-area: dis;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+}
+.keys {
+  background: #7c7c7c;
+  grid-area: key;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  color: red;
+}
+#row1,
+#row2,
+#row3 {
+  font-size: 10vh;
+}
+#row4 {
+  font-size: 6vh;
+  color: #7c7c7c;
+}
+
+#c,
+#equals {
+  color: #f97713;
 }
 button {
-  background: white;
-  width: 40px;
-  height: 40px;
+  border: 0;
+  color: white;
+  margin: 1px;
+  font-size: 5vh;
+  background-color: black;
   cursor: pointer;
-  border: 1px solid #dedede;
 }
-#equals {
-  background-color: #f97713;
+button:hover {
+  background-color: white;
+  color: black;
 }
-#c {
-  color: #f97713;
+.operation {
+  color: #7c7c7c;
 }

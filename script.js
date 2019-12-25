@@ -184,7 +184,6 @@ function firstNumber(element) {
   let localVarB = 0;
   let localvarC = parseInt(element.textContent);
   if (temp) {
-    //if = is pressed
     displaySection1.innerHTML =
       displaySection1.textContent +
       displaySection2.textContent +
